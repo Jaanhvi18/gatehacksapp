@@ -2,7 +2,7 @@ export default function Intro() {
 	return (
 		<div className="page h-screen text-center">
 			<h1 className="row text-9xl m-0 p-0 mb-2 text-gray-800 max-md:text-6xl select-none">
-				<span className="text-[#37c598]">Gate</span>Hacks
+				<span className="text-[#1bfdb5]">Gate</span>Hacks
 			</h1>
 			<p className="my-4 text-lg select-none">
 				The next fight is not in our{" "}

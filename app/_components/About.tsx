@@ -7,8 +7,6 @@ import { AboutType } from "../_data/About";
 
 export default function About({ data }: { data: AboutType }) {
     useEffect(() => {
-        // Dynamically import flowbite only on the client-side
-        import('flowbite');
     }, []);
 
     return (

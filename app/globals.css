@@ -22,6 +22,15 @@
   .title {
     @apply text-6xl mb-12 max-md:text-5xl;
   }
+
+  form > div {
+    @apply flex flex-col gap-2;
+  }
+
+  input,
+  textarea {
+    @apply shadow-md px-6 py-2 border border-slate-300;
+  }
 }
 
 
@@ -29,8 +38,10 @@ html, body {
   background-color: rgb(20, 20, 20);
   color: rgb(22, 22, 22);
   /* make this red */
-  background-image: linear-gradient(to bottom, transparent 20%, rgb(243, 243, 243) 20%),
-                    linear-gradient(to right, rgb(190, 190, 190) 20%, rgb(243, 243, 243) 20%);
+  background-image: linear-gradient(to bottom, transparent 20%, rgb(241, 132, 132) 20%),
+                    linear-gradient(to right, rgb(231, 230, 230) 20%, rgb(243, 243, 243) 20%);
   background-size: 10px 10px, 10px 10px;
   scroll-behavior: smooth;
 }
+
+

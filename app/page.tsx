@@ -13,6 +13,7 @@ import { FAQList } from "./_data/FAQ";
 
 import Link from "next/link";
 
+
 import DynamicNavbar from "./_components/DynamicNavbar";
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
 				<About data={AboutParagraph} />
 				<Schedule data={ScheduleList} />
 				<FAQ data={FAQList} />
+
 			</div>
 		</div>
 	);
