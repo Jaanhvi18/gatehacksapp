@@ -1,6 +1,6 @@
 'use client';
 import "flowbite";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function ContactForm() {
   const [firstName, setFirstName] = useState("");
@@ -18,6 +18,10 @@ export default function ContactForm() {
   const [message, setMessage] = useState("");
   const [error, setError] = useState([]);
   const [success, setSuccess] = useState(false);
+
+  useEffect(() => {
+    // Any code that uses document should be placed here
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -67,8 +71,8 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="p-6 md:p-12 lg:p-16 flex justify-center"> {/* Center the form */}
-      <form onSubmit={handleSubmit} className="max-w-md w-full py-4 mt-4 border-t flex flex-col gap-5"> {/* Set max width */}
+    <div className="p-6 md:p-12 lg:p-16 flex justify-center">
+      <form onSubmit={handleSubmit} className="max-w-md w-full py-4 mt-4 border-t flex flex-col gap-5">
         <div>
           <label htmlFor="firstName">First Name</label>
           <input
@@ -142,15 +146,14 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label htmlFor="collegeGrade">College Grade</label>
-          <input
-            onChange={(e) => setCollegeGrade(e.target.value)}
-            value={collegeGrade}
-            type="text"
-            id="collegeGrade"
-            placeholder="Junior"
-            className="bg-white border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-          />
+        <label htmlFor="collegeGrade" className="block mb-2 text-sm font-medium text-gray-900 mt-4">College Grade</label>
+        <select id="collegeGrade" className="bg-white border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+          <option value="">Select your grade</option>
+          <option value="Freshman">Freshman</option>
+          <option value="Sophomore">Sophomore</option>
+          <option value="Junior">Junior</option>
+          <option value="Senior">Senior</option>
+        </select>
         </div>
 
         <div>
@@ -165,29 +168,27 @@ export default function ContactForm() {
           />
         </div>
 
-        <div>
-          <label htmlFor="minors">Minors</label>
-          <input
-            onChange={(e) => setMinors(e.target.value)}
-            value={minors}
-            type="text"
-            id="minors"
-            placeholder="Physics, Statistics"
-            className="bg-white border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-          />
-        </div>
+              <div>
+        <label htmlFor="dietaryRestrictions" className="block mb-2 text-sm font-medium text-gray-900">Dietary Restrictions</label>
+        <select id="dietaryRestrictions" className="bg-white border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+          <option value="">None</option>
+          <option value="Vegetarian">Vegetarian</option>
+          <option value="Vegan">Vegan</option>
+          <option value="Gluten-Free">Gluten-Free</option>
+          <option value="Halal">Halal</option>
+          <option value="Kosher">Kosher</option>
+        </select>
 
-        <div>
-          <label htmlFor="dietaryRestrictions">Dietary Restrictions</label>
-          <input
-            onChange={(e) => setDietaryRestrictions(e.target.value)}
-            value={dietaryRestrictions}
-            type="text"
-            id="dietaryRestrictions"
-            placeholder="Vegetarian, Gluten-Free"
-            className="bg-white border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-          />
-        </div>
+        {/* <label htmlFor="countries" className="block mb-2 text-sm font-medium text-gray-900 mt-4">Select your country</label>
+        <select id="countries" className="bg-white border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+          <option>United States</option>
+          <option>Canada</option>
+          <option>France</option>
+          <option>Germany</option>
+        </select> */}
+      </div>
+
+
 
         <div>
           <label htmlFor="githubProfile">GitHub Profile</label>

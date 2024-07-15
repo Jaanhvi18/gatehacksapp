@@ -19,7 +19,7 @@ const formSchema = new Schema({
   email: {
     type: String,
     required: [true, 'Email is required.'],
-    match: [/^[\w.%+-]+@[\w.-]+\.[A-Za-z]{2,}$/i, 'Invalid email address'],
+    match: [/^[\w.%+-]+@[\w.-]+\.[A-Za-z]{2,}\.edu$/i, 'Invalid email address. Must be a .edu domain.'],
   },
   phoneNumber: {
     type: String,
@@ -50,7 +50,7 @@ const formSchema = new Schema({
   },
   minors: {
     type: [String],
-    required: [true, 'Minors are required.'],
+    required: [false, 'Minors are required.'],
   },
   dietaryRestrictions: {
     type: [String],
@@ -68,7 +68,7 @@ const formSchema = new Schema({
   },
   message: {
     type: String,
-    required: [true, 'Message is required.'],
+    required: [false, 'Message is required.'],
     trim: true,
   },
   date: {
