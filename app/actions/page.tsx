@@ -1,14 +1,14 @@
+import dynamic from 'next/dynamic';
 
-import Form from '../_components/Form';
-
-
+//  import the Form component with no SSR
+const Form = dynamic(() => import('../_components/Form'), { ssr: false });
 
 function ActionsPage() {
   return (
-<>
-<Form />
-{/* <UsersList /> */}
-</>
+    <>
+      <Form />
+      {/* <UsersList /> */}
+    </>
   );
 }
 
