@@ -19,7 +19,7 @@ const formSchema = new Schema({
   email: {
     type: String,
     required: [true, 'Email is required.'],
-    match: [/^[\w.%+-]+@[\w.-]+\.[A-Za-z]{2,}\.edu$/i, 'Invalid email address. Must be a .edu domain.'],
+    match: [/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.(edu)$/i, 'Invalid email address. Must be a .edu domain.'],
   },
   phoneNumber: {
     type: String,
@@ -40,7 +40,7 @@ const formSchema = new Schema({
   },
   collegeGrade: {
     type: String,
-    required: [true, 'College grade is required.'],
+    required: [false, 'College grade is required.'],
     trim: true,
     maxLength: [20, 'College grade must be lesser than 20 characters'],
   },

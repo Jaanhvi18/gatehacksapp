@@ -144,17 +144,22 @@ export default function ContactForm() {
             className="bg-white border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
           />
         </div>
-
         <div>
-        <label htmlFor="collegeGrade" className="block mb-2 text-sm font-medium text-gray-900 mt-4">College Grade</label>
-        <select id="collegeGrade" className="bg-white border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-          <option value="">Select your grade</option>
-          <option value="Freshman">Freshman</option>
-          <option value="Sophomore">Sophomore</option>
-          <option value="Junior">Junior</option>
-          <option value="Senior">Senior</option>
-        </select>
-        </div>
+      <label htmlFor="collegeGrade" className="block mb-2 text-sm font-medium text-gray-900 mt-4">
+        College Grade
+      </label>
+      <select
+        id="collegeGrade"
+        className="bg-white border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        onChange={(e) => setCollegeGrade(e.target.value)} 
+      >
+        <option value="">Select your grade</option>
+        <option value="Freshman">Freshman</option>
+        <option value="Sophomore">Sophomore</option>
+        <option value="Junior">Junior</option>
+        <option value="Senior">Senior</option>
+      </select>
+    </div>
 
         <div>
           <label htmlFor="majors">Majors</label>
@@ -163,12 +168,24 @@ export default function ContactForm() {
             value={majors}
             type="text"
             id="majors"
-            placeholder="Computer Science, Mathematics"
+            placeholder=" "
             className="bg-white border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
           />
         </div>
 
-              <div>
+        <div>
+          <label htmlFor="minors">Minors</label>
+          <input
+            onChange={(e) => setMinors(e.target.value)}
+            value={minors}
+            type="text"
+            id="minors"
+            placeholder=" "
+            className="bg-white border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          />
+        </div>
+
+              {/* <div>
         <label htmlFor="dietaryRestrictions" className="block mb-2 text-sm font-medium text-gray-900">Dietary Restrictions</label>
         <select id="dietaryRestrictions" className="bg-white border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
           <option value="">None</option>
@@ -177,7 +194,20 @@ export default function ContactForm() {
           <option value="Gluten-Free">Gluten-Free</option>
           <option value="Halal">Halal</option>
           <option value="Kosher">Kosher</option>
-        </select>
+        </select> */}
+
+
+        <div>
+          <label htmlFor="dietaryRestrictions">Dietary Restrictions</label>
+          <input
+            onChange={(e) => setDietaryRestrictions(e.target.value)}
+            value={dietaryRestrictions}
+            type="text"
+            id="dietaryRestrictions"
+            placeholder="Vegan"
+            className="bg-white border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          />
+        </div>
 
         {/* <label htmlFor="countries" className="block mb-2 text-sm font-medium text-gray-900 mt-4">Select your country</label>
         <select id="countries" className="bg-white border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
@@ -186,7 +216,7 @@ export default function ContactForm() {
           <option>France</option>
           <option>Germany</option>
         </select> */}
-      </div>
+
 
 
 

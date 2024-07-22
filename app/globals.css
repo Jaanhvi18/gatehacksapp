@@ -38,7 +38,7 @@ html, body {
   background-color: rgb(20, 20, 20);
   color: rgb(22, 22, 22);
   /* make this red */
-  background-image: linear-gradient(to bottom, transparent 20%, rgb(241, 132, 132) 20%),
+  background-image: linear-gradient(to bottom, transparent 20%, rgb(175, 203, 215) 20%),
                     linear-gradient(to right, rgb(231, 230, 230) 20%, rgb(243, 243, 243) 20%);
   background-size: 10px 10px, 10px 10px;
   scroll-behavior: smooth;
