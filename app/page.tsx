@@ -1,5 +1,5 @@
 import About from "./_components/About";
-import Facts from "./_components/Facts";
+// import Facts from "./_components/Facts";
 import Intro from "./_components/Intro";
 // import Speakers from './_components/Speakers'
 import FAQ from "./_components/FAQ";
