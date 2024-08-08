@@ -1,5 +1,7 @@
-import Image from "next/image"
-import { SocialType } from "../_data/Social"
+import Image from "next/image";
+import { CiInstagram } from 'react-icons/ci';
+import { SocialType } from "../_data/Social";
+
 
 
 export default function Bottom({ Logo, SocialList }: { Logo: string, SocialList: SocialType[] }) {
@@ -18,7 +20,10 @@ export default function Bottom({ Logo, SocialList }: { Logo: string, SocialList:
             </div>
             <div className='row items-start h-full py-6 max-md:col text-white'>
                 {SocialList.map((social, i) => (
-                    <a key={i} className="m-6" href={social.link}>{social.social}</a>
+                    <a key={i} className="m-6 flex items-center" href={social.link} target="_blank" rel="noopener noreferrer">
+                        <CiInstagram size={32} className='mr-2 text-[#cdff57]' />
+                        {social.social}
+                    </a>
                 ))}
             </div>
         </div>

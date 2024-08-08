@@ -1,44 +1,105 @@
+
 export type DayType = {
     time: string,
-    description: string
+    description: string,
+    location: string
 }
-
 
 export type ScheduleType = {
     date: string,
     events: DayType[],
 }
 
-
 export const ScheduleList: ScheduleType[] = [
     {
-        date: "Monday July 10 2023",
+        date: "Saturday September 28 2024",
         events: [
             {
+                time: "11:00 AM - 11:45 AM",
+                description: "Check-in",
+                location: "Bernstein Hall"
+            },
+            {
                 time: "12:00 PM",
-                description: "Free Boba in the Engineering Building. Bring your hacker passes."
+                description: "HACKING BEGINS",
+                location: "Bernstein Hall"
+            },
+            {
+                time: "12:00 PM - 12:30 PM",
+                description: "Finding a Team",
+                location: "Bernstein Hall"
             },
             {
                 time: "1:00 PM",
-                description: "Descope and GGV Capital are giving a speech on startups!"
+                description: "Lunch",
+                location: "Bernstein Hall"
+            },
+            {
+                time: "1:15 PM - 5:00 PM",
+                description: "Workshops (TBD)",
+                location: "Bernstein Hall"
+            },
+            {
+                time: "1:30 PM - 2:00 PM",
+                description: "Where to start - Navigating a hackathon for beginners",
+                location: "Bernstein Hall"
+            },
+            {
+                time: "6:00 PM",
+                description: "Dinner",
+                location: "Bernstein Hall"
+            },
+            {
+                time: "9:00 PM - 10:00 PM",
+                description: "Game Time!",
+                location: "Bernstein Hall"
+            },
+            {
+                time: "12:00 AM",
+                description: "Snack Time",
+                location: "Bernstein Hall"
             }
         ]
     },
     {
-        "date": "Tuesday July 11 2023",
-        "events": [
+        date: "Sunday September 29 2024",
+        events: [
             {
-                "time": "3:00 PM",
-                "description": "Descope workshop in Room 117! Learn all about authentication and user management!"
+                time: "8:00 AM",
+                description: "Breakfast",
+                location: "Bernstein Hall"
             },
             {
-                "time": "9:00 PM",
-                "description": "How to build a website in Next.js with Descope!"
+                time: "10:00 AM - 10:30 AM",
+                description: "How to Deploy a Website Workshop",
+                location: "Bernstein Hall"
+            },
+            {
+                time: "12:00 PM",
+                description: "SUBMISSIONS DUE",
+                location: "Bernstein Hall"
+            },
+            {
+                time: "12:00 PM - 1:00 PM",
+                description: "Judging and Demos",
+                location: "Bernstein Hall"
+            },
+            {
+                time: "1:00 PM",
+                description: "Lunch",
+                location: "Bernstein Hall"
+            },
+            {
+                time: "1:30 PM - 2:30 PM",
+                description: "Closing Ceremony + Prize Handout",
+                location: "Bernstein Hall"
             }
         ]
-    },
+    }
 ]
+
 // We'll be updating this schedule as we get closer to the event, but here's a rough idea of what to expect from Saturday, May 27 to Sunday, May 28:
+
 
 // 👋 9:00 AM - Doors open, registration, and meet fun people
 // 👐 10:00 AM - Opening ceremony

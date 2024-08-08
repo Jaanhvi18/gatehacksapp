@@ -18,16 +18,16 @@ export default function About({ data }: { data: AboutType }) {
                         alt="hackathon logo"
                         width={500}
                         height={500}
-                        className="w-12 h-12"
+                        className="w-full h-auto max-w-md mx-auto" // Updated classes for responsive scaling
                     />
                 </div>
-                {/* to change About section header */}
                 <div className="col flex-1 max-md:flex-none max-md:mt-6 items-center justify-center">
                     <div className="col w-[90%]">
-                        <p className="title justify-start mb-20 text-gray-800">About <span className="text-[#37c598]">Gate</span>Hacks</p>
-                        <p className="text-lg">{data.firstParagraph}</p>
-                        <br />
-                        <p className="text-lg">{data.secondParagraph}</p>
+                        <p className="title justify-start mb-8 text-gray-800"> {/* Adjusted mb-20 to mb-8 */}
+                            About <span className="text-[#95f8dc] text-shadow-black">Gate</span>Hacks
+                        </p>
+                        <p className="text-lg text-shadow-black mb-4">{data.firstParagraph}</p> {/* Added mb-4 for spacing */}
+                        <p className="text-lg text-shadow-black">{data.secondParagraph}</p>
                     </div>
                 </div>
             </div>

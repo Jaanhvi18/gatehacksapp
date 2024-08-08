@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 export function middleware(req) {
   if (req.method === "POST") {
     try {
-      const { firstName, lastName, email, phoneNumber, pronouns, university, collegeGrade, majors, minors, dietaryRestrictions, githubProfile, linkedInProfile, message } = req.body;
+      const { firstName, lastName, email, phoneNumber, pronouns, university,dietaryRestrictions, githubProfile } = req.body;
 
       req.parsedBody = {
         firstName,
@@ -13,13 +13,11 @@ export function middleware(req) {
         phoneNumber,
         pronouns,
         university,
-        collegeGrade,
-        majors,
-        minors,
+        // collegeGrade,
+        // majors,
+        // minors,
         dietaryRestrictions,
         githubProfile,
-        linkedInProfile,
-        message,
       };
 
       return NextResponse.next();

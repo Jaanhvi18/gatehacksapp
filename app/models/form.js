@@ -18,14 +18,15 @@ const formSchema = new Schema({
   },
   email: {
     type: String,
-    required: [true, 'Email is required.'],
+    required: [true, 'School Email is required.'],
     match: [/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.(edu)$/i, 'Invalid email address. Must be a .edu domain.'],
   },
   phoneNumber: {
     type: String,
     required: [true, 'Phone number is required.'],
-    match: [/^\d{3}-\d{3}-\d{4}$/, 'Invalid phone number format'],
+    match: [/^\d{10}$|^\(\d{3}\)\s?\d{3}-\d{4}$|^\d{3}-\d{3}-\d{4}$|^\d{3}\s\d{3}\s\d{4}$/, 'Invalid phone number format'], // Allows for various phone number formats
   },
+  
   pronouns: {
     type: String,
     required: [true, 'Pronouns are required.'],
@@ -38,20 +39,6 @@ const formSchema = new Schema({
     trim: true,
     maxLength: [100, 'University must be lesser than 100 characters'],
   },
-  collegeGrade: {
-    type: String,
-    required: [false, 'College grade is required.'],
-    trim: true,
-    maxLength: [20, 'College grade must be lesser than 20 characters'],
-  },
-  majors: {
-    type: [String],
-    required: [true, 'Majors are required.'],
-  },
-  minors: {
-    type: [String],
-    required: [false, 'Minors are required.'],
-  },
   dietaryRestrictions: {
     type: [String],
     required: [true, 'Dietary restrictions are required.'],
@@ -60,16 +47,6 @@ const formSchema = new Schema({
     type: String,
     required: [true, 'GitHub profile is required.'],
     match: [/^https:\/\/github\.com\/[A-Za-z0-9_-]+$/, 'Invalid GitHub profile URL'],
-  },
-  linkedInProfile: {
-    type: String,
-    required: [true, 'LinkedIn profile is required.'],
-    match: [/^https:\/\/www\.linkedin\.com\/in\/[A-Za-z0-9_-]+$/, 'Invalid LinkedIn profile URL'],
-  },
-  message: {
-    type: String,
-    required: [false, 'Message is required.'],
-    trim: true,
   },
   date: {
     type: Date,

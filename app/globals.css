@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer components {
   .page {
     @apply flex flex-col items-center justify-center w-full;
@@ -20,7 +19,7 @@
     @apply flex flex-row flex-wrap items-center justify-center;
   }
   .title {
-    @apply text-6xl mb-12 max-md:text-5xl;
+    @apply text-6xl mb-12 max-md:text-5xl font-bold;
   }
 
   form > div {
@@ -33,15 +32,12 @@
   }
 }
 
-
 html, body {
   background-color: rgb(20, 20, 20);
   color: rgb(22, 22, 22);
   /* make this red */
-  background-image: linear-gradient(to bottom, transparent 20%, rgb(175, 203, 215) 20%),
-                    linear-gradient(to right, rgb(231, 230, 230) 20%, rgb(243, 243, 243) 20%);
+  background-image: linear-gradient(to bottom, transparent 10%, rgb(242, 188, 188) 10%),
+                    linear-gradient(to right, rgb(255, 251, 251) 20%, rgb(255, 251, 251) 20%);
   background-size: 10px 10px, 10px 10px;
   scroll-behavior: smooth;
 }
-
-
