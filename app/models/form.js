@@ -1,6 +1,5 @@
 import mongoose, { Schema } from "mongoose";
 
-
 const formSchema = new Schema({
   firstName: {
     type: String,
@@ -26,7 +25,6 @@ const formSchema = new Schema({
     required: [true, 'Phone number is required.'],
     match: [/^\d{10}$|^\(\d{3}\)\s?\d{3}-\d{4}$|^\d{3}-\d{3}-\d{4}$|^\d{3}\s\d{3}\s\d{4}$/, 'Invalid phone number format'], // Allows for various phone number formats
   },
-  
   pronouns: {
     type: String,
     required: [true, 'Pronouns are required.'],

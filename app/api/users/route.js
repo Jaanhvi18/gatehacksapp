@@ -1,52 +1,54 @@
-
 import Form from '@/app/models/form';
-// import mongoose from 'mongoose';
 import connectDB from "@/app/lib/mongodb";
-// import Contact from "@/app/models/contact";
 import mongoose from "mongoose";
 import { NextResponse } from "next/server";
 
 export async function POST(req) {
-  const {firstName,
+  // Destructure the request body to extract the form fields
+  const {
+    firstName,
     lastName,
     email,
     phoneNumber,
     pronouns,
     university,
-    // collegeGrade,
-    // majors,
-    // minors,
     dietaryRestrictions,
-    githubProfile} = await req.json();
+    githubProfile,
+  } = await req.json();
 
   try {
+    // Connect to the database
     await connectDB();
-    await Form.create({firstName,
+
+    // Create a new form entry in the database
+    const form = await Form.create({
+      firstName,
       lastName,
       email,
       phoneNumber,
       pronouns,
       university,
-      // collegeGrade,
-      // majors,
-      // minors,
       dietaryRestrictions,
-      githubProfile,});
+      githubProfile,
+    });
 
+    // Return a success response
     return NextResponse.json({
       msg: ["Message sent successfully"],
       success: true,
-    });
+      formId: form._id, // Optional: Returning the created form's ID
+    }, { status: 200 });
+
   } catch (error) {
+    // Handle Mongoose validation errors
     if (error instanceof mongoose.Error.ValidationError) {
-      let errorList = [];
-      for (let e in error.errors) {
-        errorList.push(error.errors[e].message);
-      }
+      const errorList = Object.values(error.errors).map(err => err.message);
       console.log(errorList);
-      return NextResponse.json({ msg: errorList });
+      return NextResponse.json({ msg: errorList }, { status: 400 });
     } else {
-      return NextResponse.json({ msg: ["Unable to send message."] });
+      // Handle other errors
+      console.error(error); // Log the error for debugging purposes
+      return NextResponse.json({ msg: ["Unable to send message."] }, { status: 500 });
     }
   }
 }
