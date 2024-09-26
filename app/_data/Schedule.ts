@@ -35,15 +35,25 @@ export const ScheduleList: ScheduleType[] = [
                 location: "Bernstein Hall"
             },
             {
-                time: "1:15 PM - 5:00 PM",
-                description: "Workshops (TBD)",
+                time: "1:15 PM - 2:00 PM",
+                description: "Pitching 101",
                 location: "Bernstein Hall"
             },
             {
-                time: "1:30 PM - 2:00 PM",
-                description: "Where to start - Navigating a hackathon for beginners",
+                time: "2:30 PM - 3:00 PM",
+                description: "Github Basics",
                 location: "Bernstein Hall"
             },
+            {
+                time: "3:30 PM - 4:00 PM",
+                description: "Figma Basics: Creating an MVP",
+                location: "Bernstein Hall"
+            },
+            {
+                time: "4:00 PM - 5:00 PM",
+                description: "Website 101",
+                location: "Bernstein Hall"
+            },            
             {
                 time: "6:00 PM",
                 description: "Dinner",
@@ -65,13 +75,13 @@ export const ScheduleList: ScheduleType[] = [
         date: "Sunday September 29 2024",
         events: [
             {
-                time: "8:00 AM",
-                description: "Breakfast",
-                location: "Bernstein Hall"
-            },
-            {
                 time: "10:00 AM - 10:30 AM",
                 description: "How to Deploy a Website Workshop",
+                location: "Bernstein Hall 2"
+            },
+            {
+                time: "10:30 AM",
+                description: "Brunch",
                 location: "Bernstein Hall"
             },
             {
@@ -84,11 +94,11 @@ export const ScheduleList: ScheduleType[] = [
                 description: "Judging and Demos",
                 location: "Bernstein Hall"
             },
-            {
-                time: "1:00 PM",
-                description: "Lunch",
-                location: "Bernstein Hall"
-            },
+            // {
+            //     time: "1:00 PM",
+            //     description: "Lunch",
+            //     location: "Bernstein Hall"
+            // },
             {
                 time: "1:30 PM - 2:30 PM",
                 description: "Closing Ceremony + Prize Handout",

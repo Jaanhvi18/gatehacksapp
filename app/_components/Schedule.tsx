@@ -5,7 +5,7 @@ export default function Schedule({ data }: { data: ScheduleType[] }) {
         <div id="schedule" className="page component">
             <p className="title">Schedule</p>
             <p className="mb-6 font-bold">
-                We&apos;ll be updating this schedule as we get closer to the event, but here&apos;s a rough idea of what to expect from Saturday, May 27 to Sunday, May 28:
+
             </p>
             <div className="row items-start justify-evenly w-full">
                 {data.map((schedule, i) => (
