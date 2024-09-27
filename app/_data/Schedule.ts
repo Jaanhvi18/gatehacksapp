@@ -30,12 +30,12 @@ export const ScheduleList: ScheduleType[] = [
                 location: "Bernstein Hall"
             },
             {
-                time: "1:00 PM",
+                time: "12:30 PM",
                 description: "Lunch",
                 location: "Bernstein Hall"
             },
             {
-                time: "1:15 PM - 2:00 PM",
+                time: "1:00 PM - 1:30 PM",
                 description: "Pitching 101",
                 location: "Bernstein Hall"
             },
@@ -59,11 +59,11 @@ export const ScheduleList: ScheduleType[] = [
                 description: "Dinner",
                 location: "Bernstein Hall"
             },
-            {
-                time: "9:00 PM - 10:00 PM",
-                description: "Game Time!",
-                location: "Bernstein Hall"
-            },
+            // {
+            //     time: "9:00 PM - 10:00 PM",
+            //     description: "Game Time!",
+            //     location: "Bernstein Hall"
+            // },
             {
                 time: "12:00 AM",
                 description: "Snack Time",
@@ -77,7 +77,7 @@ export const ScheduleList: ScheduleType[] = [
             {
                 time: "10:00 AM - 10:30 AM",
                 description: "How to Deploy a Website Workshop",
-                location: "Bernstein Hall 2"
+                location: "Bernstein Hall"
             },
             {
                 time: "10:30 AM",
